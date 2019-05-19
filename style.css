@@ -1,0 +1,30 @@
+body{
+	background: white;
+}
+
+.animated-text{
+	/* gradient for striped background */
+	background-image: -webkit-linear-gradient(#fff 50%, #000 50%);
+	background-repeat: repeat;
+	background-position: 0 0;
+	background-size: 100% 50px;
+	-webkit-text-fill-color: transparent;
+	/* this is important kiun ke they hide the background */
+	-webkit-background-clip: text;
+	animation: stripes 2s linear infinite;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	text-align: center;
+    font-family: "Open Sans";
+    /* font-family: 'Luckiest Guy', cursive; */
+	font-weight: bold;
+	font-size: 150px;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+@keyframes stripes{
+	100%{
+		background-position: 0 -50px;
+	}
+}
